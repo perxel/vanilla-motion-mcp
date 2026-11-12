@@ -1,5 +1,5 @@
 MCP_PUBLIC_URL="http://localhost:8788"
-CONTENT_URL=""
+CONTENT_URL="https://vanilla-motion.com/content.json"
 IP_HASH_SALT="dev-salt-change-me"
 COOKIE_ENCRYPTION_KEY="dev-cookie-key-change-me-32-chars-min"
 ACCESS_CLIENT_ID=""

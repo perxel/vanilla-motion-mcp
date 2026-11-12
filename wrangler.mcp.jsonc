@@ -2,7 +2,7 @@
   "$schema": "https://developers.cloudflare.com/workers/wrangler/configuration-schema.json",
   // The MCP Worker: serves /mcp, /, /health, OAuth, and the dashboard at /dash.
   // One per MCP. See README "Infrastructure" for the whole picture.
-  "name": "example-mcp",
+  "name": "vm-mcp",
   "main": "src/index.ts",
   "compatibility_date": "2026-09-01",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
@@ -14,15 +14,14 @@
   "preview_urls": false,
   // Custom domain: DNS record + certificate are created on `wrangler deploy`.
   // Must match MCP_PUBLIC_URL below. Change per MCP.
-  "routes": [{ "pattern": "mcp.example.com", "custom_domain": true }],
+  "routes": [{ "pattern": "mcp.vanilla-motion.com", "custom_domain": true }],
 
   "vars": {
     // Exactly https://<custom domain>. OAuth `resource` must equal the URL users
     // paste (plus /mcp). `.dev.vars` overrides this with http://localhost:8788.
-    "MCP_PUBLIC_URL": "https://mcp.example.com",
-    // Static JSON source, only when a tool uses kit/core/static-source.ts:
-    // a public URL the site publishes at build time (README "Content source").
-    // "CONTENT_URL": "https://example.com/content.json",
+    "MCP_PUBLIC_URL": "https://mcp.vanilla-motion.com",
+    // The site publishes it on every build (perxel/vanilla-motion scripts/build-content.mjs).
+    "CONTENT_URL": "https://vanilla-motion.com/content.json",
     // Dashboard mount path on this Worker ("off" disables it).
     "DASH_PATH": "/dash",
     // Optional public demo: "true" serves /dash with no sign-in (metrics become
@@ -30,7 +29,7 @@
     // "DASH_PUBLIC": "true",
     // Access team domain (Zero Trust → Settings → Custom Pages / team name),
     // e.g. "your-team.cloudflareaccess.com". Shared by every MCP in the account.
-    "DASH_ACCESS_TEAM": "<paste: <team>.cloudflareaccess.com>",
+    "DASH_ACCESS_TEAM": "perxel.cloudflareaccess.com",
     // Application Audience (AUD) tag of the Access app protecting
     // <host>/dash (Access → Applications → the app → Overview). Per MCP.
     "DASH_ACCESS_AUD": "<paste: AUD tag of the /dash Access app>"
@@ -48,7 +47,7 @@
     { "binding": "CONTENT_KV", "id": "<run: wrangler kv namespace create CONTENT_KV>" }
   ],
   // mcp_<slug>, with - turned into _. The dashboard reads the same name.
-  "analytics_engine_datasets": [{ "binding": "METRICS", "dataset": "mcp_example" }],
+  "analytics_engine_datasets": [{ "binding": "METRICS", "dataset": "mcp_vanilla_motion" }],
   // The account's shared metrics proxy (wrangler.proxy.jsonc), reached
   // Worker-to-Worker: the proxy itself has no public URL.
   "services": [{ "binding": "METRICS_PROXY", "service": "mcp-metrics-proxy" }],

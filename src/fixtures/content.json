@@ -1,0 +1,1784 @@
+{
+  "version": 1,
+  "generatedAt": "2026-11-12T06:06:19.163Z",
+  "site": {
+    "name": "Vanilla Motion",
+    "url": "https://vanilla-motion.com",
+    "email": null,
+    "phone": null,
+    "address": null,
+    "socials": {}
+  },
+  "taxonomy": [
+    {
+      "slug": "css",
+      "label": "CSS",
+      "category": "CSS technique"
+    },
+    {
+      "slug": "css-animations",
+      "label": "CSS Animations",
+      "category": "CSS technique"
+    },
+    {
+      "slug": "css-clip-path",
+      "label": "CSS Clip-path",
+      "category": "CSS technique"
+    },
+    {
+      "slug": "css-mask",
+      "label": "CSS Mask",
+      "category": "CSS technique"
+    },
+    {
+      "slug": "css-motion-path",
+      "label": "CSS Motion Path",
+      "category": "CSS technique"
+    },
+    {
+      "slug": "border",
+      "label": "Border",
+      "category": "CSS technique"
+    },
+    {
+      "slug": "gradient",
+      "label": "Gradient",
+      "category": "CSS technique"
+    },
+    {
+      "slug": "layout",
+      "label": "Layout",
+      "category": "Layout & shape"
+    },
+    {
+      "slug": "shapes",
+      "label": "Shapes",
+      "category": "Layout & shape"
+    },
+    {
+      "slug": "tabs",
+      "label": "Tabs",
+      "category": "Layout & shape"
+    },
+    {
+      "slug": "grid",
+      "label": "Grid",
+      "category": "Layout & shape"
+    },
+    {
+      "slug": "drag",
+      "label": "Drag",
+      "category": "Interaction"
+    },
+    {
+      "slug": "scroll",
+      "label": "Scroll",
+      "category": "Interaction"
+    },
+    {
+      "slug": "sticky",
+      "label": "Sticky",
+      "category": "Interaction"
+    },
+    {
+      "slug": "motion",
+      "label": "Motion",
+      "category": "Motion quality"
+    },
+    {
+      "slug": "animation",
+      "label": "Animation",
+      "category": "Motion quality"
+    },
+    {
+      "slug": "fade",
+      "label": "Fade",
+      "category": "Motion quality"
+    },
+    {
+      "slug": "slide",
+      "label": "Slide",
+      "category": "Motion quality"
+    },
+    {
+      "slug": "webgl",
+      "label": "WebGL",
+      "category": "Rendering"
+    },
+    {
+      "slug": "glsl",
+      "label": "GLSL",
+      "category": "Rendering"
+    },
+    {
+      "slug": "gsap",
+      "label": "GSAP",
+      "category": "Other"
+    },
+    {
+      "slug": "video",
+      "label": "Video",
+      "category": "Other"
+    },
+    {
+      "slug": "primitive-ui",
+      "label": "Primitive UI",
+      "category": "Other"
+    },
+    {
+      "slug": "observer",
+      "label": "Observer",
+      "category": "Animation"
+    },
+    {
+      "slug": "scroll-trigger",
+      "label": "ScrollTrigger",
+      "category": "Animation"
+    },
+    {
+      "slug": "lenis",
+      "label": "Lenis",
+      "category": "Animation"
+    },
+    {
+      "slug": "tweakpane",
+      "label": "Tweakpane",
+      "category": "Animation"
+    },
+    {
+      "slug": "canvas-api",
+      "label": "Canvas API",
+      "category": "Rendering"
+    },
+    {
+      "slug": "css-custom-properties",
+      "label": "CSS Custom Properties",
+      "category": "CSS features"
+    },
+    {
+      "slug": "css-shape-function",
+      "label": "CSS shape()",
+      "category": "CSS features"
+    },
+    {
+      "slug": "at-property",
+      "label": "@property",
+      "category": "CSS features"
+    },
+    {
+      "slug": "offset-path",
+      "label": "offset-path",
+      "category": "CSS features"
+    },
+    {
+      "slug": "css-scroll-driven-animations",
+      "label": "CSS Scroll-Driven Animations",
+      "category": "CSS features"
+    },
+    {
+      "slug": "typescript",
+      "label": "TypeScript",
+      "category": "Language & tooling"
+    },
+    {
+      "slug": "vanilla-js",
+      "label": "Vanilla JS",
+      "category": "Language & tooling"
+    },
+    {
+      "slug": "vanilla-css",
+      "label": "Vanilla CSS",
+      "category": "Language & tooling"
+    },
+    {
+      "slug": "tailwind-css-v4",
+      "label": "Tailwind CSS v4",
+      "category": "Language & tooling"
+    }
+  ],
+  "items": [
+    {
+      "type": "effect",
+      "slug": "ice-logo",
+      "title": "Ice Logo",
+      "excerpt": "Any SVG logo cut from ice: it crumbles into splinters, chips and powder under the cursor, then pieces itself back together.",
+      "url": "https://vanilla-motion.com/ice-logo/",
+      "category": "Rendering",
+      "date": "2026-11-12",
+      "tags": [
+        "webgl",
+        "glsl",
+        "motion"
+      ],
+      "body": "Ice Logo\n\n Any SVG logo cut from ice: it crumbles into splinters, chips and powder under the cursor, then pieces itself back together.\n\nLive: https://vanilla-motion.com/ice-logo/ · Tuning app: https://vanilla-motion.com/ice-logo/app/ · Code reference: https://vanilla-motion.com/ice-logo/skill.md · Params: https://vanilla-motion.com/ice-logo/params.json\n\nIce Logo turns any SVG logo into a block of ice. Move the cursor over it and the ice cracks into splinters, chips and powder, then the pieces fly back and the logo heals itself. We first built it for a client's brand page, then made the logo an input so the same effect works for any mark.\n\nHow it works\n\nThe logo stays one solid mesh until it breaks. The SVG is read with Three.js's SVGLoader, centred, and scaled so its larger side is always the same length. That way the tuned values (depth, bevel, reach) look the same for a wide wordmark and a square icon. The shapes are then extruded into one smooth, bevelled mesh.\n\nThe cracks are planned before anything breaks. Points are scattered over the logo and turned into Voronoi cells with d3-delaunay, then stretched so they read as splinters rather than tiles. Each cell is clipped to the logo outline with polygon-clipping. Which cells are broken is stored in a small texture, and the shader on the intact mesh cuts a hole wherever a cell is marked broken.\n\nEach broken cell has a hidden twin. For every cell there's a jagged chunk, hidden until its cell breaks. Then it flies out with a push, a spin and gravity, and a spring pulls it back to its place. When it lands, the hole closes and the chunk hides again. Powder and small chips are drawn from fixed pools, so a burst of breaking never allocates new objects mid-animation.\n\nThe ice is a physical material. It uses Three.js's transmission (glass) material with frost textures drawn on a canvas at startup. The frost changes as the logo turns toward or away from the light, so the ice moves between cloudy and see-through while the cursor moves.\n\nWhen to use it\n\nIf a brand page has one hero moment and a logo that people will play with, it works well: it rewards the cursor without asking for a click.\n\nIf the page is long, or the logo sits next to text people need to read, keep it smaller or use something lighter. The effect runs WebGL with a glass material, so it costs more than a CSS animation, and on low-end phones it is worth lowering cells and dust.\n\nEvery value in the tuning app is also a data- attribute on the embed, so what you set in the app is what you ship.",
+      "techUsed": [
+        "webgl",
+        "glsl",
+        "canvas-api",
+        "typescript"
+      ],
+      "version": "1.0.0",
+      "caseStudyUrl": "https://vanilla-motion.com/ice-logo/case-study.md",
+      "skillUrl": "https://vanilla-motion.com/ice-logo/skill.md",
+      "paramsUrl": "https://vanilla-motion.com/ice-logo/params.json",
+      "appUrl": "https://vanilla-motion.com/ice-logo/app/",
+      "registryUrl": "https://vanilla-motion.com/r/ice-logo.json",
+      "embed": {
+        "globalName": "IceLogo",
+        "scriptUrl": "https://vanilla-motion.com/embed/ice-logo/1.0.0/ice-logo.js",
+        "attribute": "data-ice-logo",
+        "requires": []
+      },
+      "dependencies": [
+        "d3-delaunay@^6.0.6",
+        "polygon-clipping@^0.15.7",
+        "three@0.185.1"
+      ],
+      "params": [
+        {
+          "key": "cells",
+          "attr": "data-cells",
+          "type": "number",
+          "default": 520,
+          "min": 40,
+          "max": 800,
+          "step": 10,
+          "unit": null,
+          "options": null,
+          "label": "Pieces",
+          "section": "Shape",
+          "help": "How many cells the logo is cut into."
+        },
+        {
+          "key": "layers",
+          "attr": "data-layers",
+          "type": "number",
+          "default": 3,
+          "min": 1,
+          "max": 4,
+          "step": 1,
+          "unit": null,
+          "options": null,
+          "label": "Layers",
+          "section": "Shape",
+          "help": "How many pieces each cell is cut into through the thickness."
+        },
+        {
+          "key": "depth",
+          "attr": "data-depth",
+          "type": "number",
+          "default": 9,
+          "min": 1,
+          "max": 16,
+          "step": 0.1,
+          "unit": null,
+          "options": null,
+          "label": "Thickness",
+          "section": "Shape",
+          "help": "How thick the logo is."
+        },
+        {
+          "key": "bevel",
+          "attr": "data-bevel",
+          "type": "number",
+          "default": 1.2,
+          "min": 0,
+          "max": 1.4,
+          "step": 0.01,
+          "unit": null,
+          "options": null,
+          "label": "Edge rounding",
+          "section": "Shape",
+          "help": "How round the edges of the whole logo are."
+        },
+        {
+          "key": "splinter",
+          "attr": "data-splinter",
+          "type": "number",
+          "default": 1,
+          "min": 1,
+          "max": 5,
+          "step": 0.1,
+          "unit": null,
+          "options": null,
+          "label": "Splinter length",
+          "section": "Shape",
+          "help": "Stretches the break cells along the strokes; 1 keeps them round."
+        },
+        {
+          "key": "reach",
+          "attr": "data-reach",
+          "type": "number",
+          "default": 3,
+          "min": 0.5,
+          "max": 10,
+          "step": 0.1,
+          "unit": null,
+          "options": null,
+          "label": "Break size",
+          "section": "Break",
+          "help": "How far from the touched point the ice crumbles, also into its depth."
+        },
+        {
+          "key": "maxBroken",
+          "attr": "data-max-broken",
+          "type": "number",
+          "default": 30,
+          "min": 2,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "options": null,
+          "label": "Max broken",
+          "section": "Break",
+          "help": "Toughness: the most of the logo that can be loose at one time. Lower is harder to break."
+        },
+        {
+          "key": "cooldown",
+          "attr": "data-cooldown",
+          "type": "number",
+          "default": 0.12,
+          "min": 0,
+          "max": 0.6,
+          "step": 0.01,
+          "unit": "s",
+          "options": null,
+          "label": "Pause between bites",
+          "section": "Break",
+          "help": "Shortest time between two breaks while the cursor moves. Longer is harder to break."
+        },
+        {
+          "key": "force",
+          "attr": "data-force",
+          "type": "number",
+          "default": 12,
+          "min": 1,
+          "max": 60,
+          "step": 0.5,
+          "unit": null,
+          "options": null,
+          "label": "Force",
+          "section": "Break",
+          "help": "How hard the pieces are pushed away."
+        },
+        {
+          "key": "spin",
+          "attr": "data-spin",
+          "type": "number",
+          "default": 5,
+          "min": 0,
+          "max": 20,
+          "step": 0.1,
+          "unit": null,
+          "options": null,
+          "label": "Spin",
+          "section": "Break",
+          "help": "How fast the loose pieces tumble."
+        },
+        {
+          "key": "gravity",
+          "attr": "data-gravity",
+          "type": "number",
+          "default": 2.2,
+          "min": 0,
+          "max": 30,
+          "step": 0.5,
+          "unit": null,
+          "options": null,
+          "label": "Gravity",
+          "section": "Break",
+          "help": "How quickly loose pieces sink."
+        },
+        {
+          "key": "drag",
+          "attr": "data-drag",
+          "type": "number",
+          "default": 2,
+          "min": 0,
+          "max": 6,
+          "step": 0.05,
+          "unit": null,
+          "options": null,
+          "label": "Air drag",
+          "section": "Break",
+          "help": "How soon loose pieces slow down and hang in place."
+        },
+        {
+          "key": "dust",
+          "attr": "data-dust",
+          "type": "number",
+          "default": 700,
+          "min": 0,
+          "max": 900,
+          "step": 10,
+          "unit": null,
+          "options": null,
+          "label": "Powder",
+          "section": "Break",
+          "help": "How much fine ice powder a break throws out."
+        },
+        {
+          "key": "chips",
+          "attr": "data-chips",
+          "type": "number",
+          "default": 10,
+          "min": 0,
+          "max": 40,
+          "step": 1,
+          "unit": null,
+          "options": null,
+          "label": "Ice chips",
+          "section": "Break",
+          "help": "How many small lumps fly out of a break."
+        },
+        {
+          "key": "restoreDelay",
+          "attr": "data-restore-delay",
+          "type": "number",
+          "default": 1.2,
+          "min": 0,
+          "max": 5,
+          "step": 0.05,
+          "unit": null,
+          "options": null,
+          "label": "Delay",
+          "section": "Restore",
+          "help": "Time before loose pieces start to return."
+        },
+        {
+          "key": "restoreStagger",
+          "attr": "data-restore-stagger",
+          "type": "number",
+          "default": 1,
+          "min": 0,
+          "max": 4,
+          "step": 0.05,
+          "unit": null,
+          "options": null,
+          "label": "Stagger",
+          "section": "Restore",
+          "help": "Extra random wait, so pieces return one after another."
+        },
+        {
+          "key": "stiffness",
+          "attr": "data-stiffness",
+          "type": "number",
+          "default": 45,
+          "min": 5,
+          "max": 250,
+          "step": 1,
+          "unit": null,
+          "options": null,
+          "label": "Pull",
+          "section": "Restore",
+          "help": "How strongly pieces are pulled back into place."
+        },
+        {
+          "key": "damping",
+          "attr": "data-damping",
+          "type": "number",
+          "default": 0.85,
+          "min": 0.2,
+          "max": 2,
+          "step": 0.01,
+          "unit": null,
+          "options": null,
+          "label": "Settle",
+          "section": "Restore",
+          "help": "Below 1 the pieces overshoot and click in; above 1 they glide in."
+        },
+        {
+          "key": "transmission",
+          "attr": "data-transmission",
+          "type": "number",
+          "default": 0.96,
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "unit": null,
+          "options": null,
+          "label": "Clarity",
+          "section": "Ice",
+          "help": "How much you see through the ice."
+        },
+        {
+          "key": "roughness",
+          "attr": "data-roughness",
+          "type": "number",
+          "default": 0.26,
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "unit": null,
+          "options": null,
+          "label": "Surface frost",
+          "section": "Ice",
+          "help": "How blurred the surface is."
+        },
+        {
+          "key": "thickness",
+          "attr": "data-thickness",
+          "type": "number",
+          "default": 7,
+          "min": 0,
+          "max": 14,
+          "step": 0.1,
+          "unit": null,
+          "options": null,
+          "label": "Bend",
+          "section": "Ice",
+          "help": "How strongly the ice bends what is behind it."
+        },
+        {
+          "key": "ior",
+          "attr": "data-ior",
+          "type": "number",
+          "default": 1.31,
+          "min": 1,
+          "max": 2.3,
+          "step": 0.01,
+          "unit": null,
+          "options": null,
+          "label": "Refraction",
+          "section": "Ice",
+          "help": "1.31 is real ice; higher looks more like crystal."
+        },
+        {
+          "key": "frost",
+          "attr": "data-frost",
+          "type": "number",
+          "default": 2.4,
+          "min": 0,
+          "max": 5,
+          "step": 0.05,
+          "unit": null,
+          "options": null,
+          "label": "Surface bumps",
+          "section": "Ice",
+          "help": "Depth of the pitted, scratched surface."
+        },
+        {
+          "key": "milk",
+          "attr": "data-milk",
+          "type": "number",
+          "default": 0.75,
+          "min": 0,
+          "max": 2.5,
+          "step": 0.01,
+          "unit": null,
+          "options": null,
+          "label": "Frost patches",
+          "section": "Ice",
+          "help": "Strength of the patchy frost, grain, bubbles and cracks in the ice."
+        },
+        {
+          "key": "rim",
+          "attr": "data-rim",
+          "type": "number",
+          "default": 0.55,
+          "min": 0,
+          "max": 2,
+          "step": 0.01,
+          "unit": null,
+          "options": null,
+          "label": "Edge frost",
+          "section": "Ice",
+          "help": "White frost on the rounded edges; the flat faces stay clearer."
+        },
+        {
+          "key": "light",
+          "attr": "data-light",
+          "type": "number",
+          "default": 2.6,
+          "min": 0,
+          "max": 5,
+          "step": 0.05,
+          "unit": null,
+          "options": null,
+          "label": "Light",
+          "section": "Ice",
+          "help": "Brightness of the reflections and highlights."
+        },
+        {
+          "key": "shardFrost",
+          "attr": "data-shard-frost",
+          "type": "number",
+          "default": 0.2,
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "unit": null,
+          "options": null,
+          "label": "Loose piece frost",
+          "section": "Ice",
+          "help": "How strong the white frost speckle on the loose chunks is."
+        },
+        {
+          "key": "frostShift",
+          "attr": "data-frost-shift",
+          "type": "number",
+          "default": 0.85,
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "unit": null,
+          "options": null,
+          "label": "Frost shift",
+          "section": "Ice",
+          "help": "How much the ice changes between cloudy white and see-through as it turns with the cursor."
+        },
+        {
+          "key": "sway",
+          "attr": "data-sway",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "max": 1.5,
+          "step": 0.01,
+          "unit": null,
+          "options": null,
+          "label": "Auto turn",
+          "section": "Motion",
+          "help": "How far the logo turns by itself. 0 keeps it still."
+        },
+        {
+          "key": "swaySpeed",
+          "attr": "data-sway-speed",
+          "type": "number",
+          "default": 0.35,
+          "min": 0,
+          "max": 2,
+          "step": 0.01,
+          "unit": null,
+          "options": null,
+          "label": "Auto turn speed",
+          "section": "Motion",
+          "help": "How fast the logo turns by itself."
+        },
+        {
+          "key": "follow",
+          "attr": "data-follow",
+          "type": "number",
+          "default": 0.45,
+          "min": 0,
+          "max": 1.2,
+          "step": 0.01,
+          "unit": null,
+          "options": null,
+          "label": "Turn with cursor",
+          "section": "Motion",
+          "help": "How far the logo turns toward the cursor position."
+        },
+        {
+          "key": "autoBreak",
+          "attr": "data-auto-break",
+          "type": "boolean",
+          "default": false,
+          "min": null,
+          "max": null,
+          "step": null,
+          "unit": null,
+          "options": null,
+          "label": "Auto break",
+          "section": "Motion",
+          "help": "Breaks the logo by itself when the cursor is idle. Off: it only breaks under the cursor."
+        }
+      ],
+      "demos": [
+        {
+          "name": "default",
+          "title": "Ice Logo",
+          "url": "https://vanilla-motion.com/ice-logo/embed/"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "slug": "ripple-reveal",
+      "title": "Ripple Reveal",
+      "excerpt": "Slideshow transition using CSS mask + radial-gradient to expand slides outward from a configurable origin point with a soft liquid ripple edge",
+      "url": "https://vanilla-motion.com/ripple-reveal/",
+      "category": "Motion quality",
+      "date": "2026-07-22",
+      "tags": [
+        "motion",
+        "css",
+        "css-mask",
+        "animation"
+      ],
+      "body": "Ripple Reveal\n\n Slideshow transition using CSS mask + radial-gradient to expand slides outward from a configurable origin point with a soft liquid ripple edge\n\nLive: https://vanilla-motion.com/ripple-reveal/ · Tuning app: https://vanilla-motion.com/ripple-reveal/app/ · Code reference: https://vanilla-motion.com/ripple-reveal/skill.md · Params: https://vanilla-motion.com/ripple-reveal/params.json\n\nCSS mask + radial-gradient expands the incoming slide outward from a configurable origin point. A single @property --p drives the radius; a feather zone between the two gradient stops creates a soft, liquid ripple edge.\n\nRipple reveal\n\nCircle expands from a configurable origin, like a drop hitting still water. The slideshow auto-advances every 5 seconds with a 1.2s reveal animation.\n\nHow it works\n\nThe key is @property --p — a registered CSS custom property that can be animated with @keyframes. Without @property, animating --p inside radial-gradient() doesn't work because the browser can't interpolate unregistered custom properties.\n\n \n\nThe active slide computes a radius from --p, then derives two edge stops for a feather zone:\n\n \n\nThe --feather gap between --edge-in and --edge-out softens the expanding ring. Larger values → blurrier edge; 0 → hard circle wipe.\n\nThe origin and timing are params (data- attributes on the embed, options in code). The class writes them to custom properties on the slideshow container:\n\n \n\nThe time between slides (delay, in ms) stays in JS.\n\n150% for the max radius guarantees the circle covers all four corners regardless of origin position. If you set originX: 0, the farthest corner is the top-right; 150% of the diagonal still clears it.\n\nSlide z-index management\n\nCSS animation doesn't handle stacking — JS does. Each transition bumps a monotonically increasing zCounter so the incoming slide always paints above everything:\n\n \n\nThe remove + add in sequence forces the browser to restart the @keyframes animation even if the slide was previously .active. After animDuration + 200ms (the duration param), the previous slide drops its .active class and falls to z-index: 0.\n\nKen Burns effect\n\nActive slides get a slow scale(1.1) via a long transition:\n\n \n\nThe 10s duration means the zoom is barely perceptible within a 5s slide hold, but visible as slow drift — the Ken Burns effect without JS.\n\nAccessibility\n\n \n\nWhen prefers-reduced-motion is set, skip mounting the slideshow entirely so slides don't auto-advance and no animation runs.\n\nTop-left origin\n\nSet originX: 0 and originY: 0 (data-origin-x=\"0\" data-origin-y=\"0\" on the embed) — ripple expands from the top-left corner.",
+      "techUsed": [
+        "css-mask",
+        "css-custom-properties",
+        "at-property",
+        "css-animations",
+        "vanilla-js",
+        "typescript"
+      ],
+      "version": "1.0.0",
+      "caseStudyUrl": "https://vanilla-motion.com/ripple-reveal/case-study.md",
+      "skillUrl": "https://vanilla-motion.com/ripple-reveal/skill.md",
+      "paramsUrl": "https://vanilla-motion.com/ripple-reveal/params.json",
+      "appUrl": "https://vanilla-motion.com/ripple-reveal/app/",
+      "registryUrl": "https://vanilla-motion.com/r/ripple-reveal.json",
+      "embed": {
+        "globalName": "RippleReveal",
+        "scriptUrl": "https://vanilla-motion.com/embed/ripple-reveal/1.0.0/ripple-reveal.js",
+        "attribute": "data-ripple-reveal",
+        "requires": []
+      },
+      "dependencies": [],
+      "params": [
+        {
+          "key": "delay",
+          "attr": "data-delay",
+          "type": "number",
+          "default": 5000,
+          "min": 500,
+          "max": 10000,
+          "step": 100,
+          "unit": null,
+          "options": null,
+          "label": "Time between slides",
+          "section": "Timing",
+          "help": "Milliseconds a slide stays before the next one ripples in."
+        },
+        {
+          "key": "duration",
+          "attr": "data-duration",
+          "type": "number",
+          "default": 1000,
+          "min": 100,
+          "max": 4000,
+          "step": 50,
+          "unit": null,
+          "options": null,
+          "label": "Reveal duration",
+          "section": "Timing",
+          "help": "Milliseconds one reveal takes."
+        },
+        {
+          "key": "feather",
+          "attr": "data-feather",
+          "type": "number",
+          "default": 20,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": null,
+          "options": null,
+          "label": "Feather",
+          "section": "Ripple",
+          "help": "Width of the soft edge. 0 is a hard circle."
+        },
+        {
+          "key": "originX",
+          "attr": "data-origin-x",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": null,
+          "options": null,
+          "label": "Origin X",
+          "section": "Ripple",
+          "help": "Where the ripple starts across the width. 0 is the left edge."
+        },
+        {
+          "key": "originY",
+          "attr": "data-origin-y",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": null,
+          "options": null,
+          "label": "Origin Y",
+          "section": "Ripple",
+          "help": "Where the ripple starts down the height. 0 is the top edge."
+        },
+        {
+          "key": "ease",
+          "attr": "data-ease",
+          "type": "string",
+          "default": "cubic-bezier(0.4, 0, 1, 1)",
+          "min": null,
+          "max": null,
+          "step": null,
+          "unit": null,
+          "options": [
+            "cubic-bezier(0.4, 0, 1, 1)",
+            "linear",
+            "cubic-bezier(0, 0, 0.2, 1)",
+            "cubic-bezier(0.65, 0, 0.35, 1)"
+          ],
+          "label": "Ease",
+          "section": "Ripple",
+          "help": "Speed curve of the expansion."
+        },
+        {
+          "key": "zoom",
+          "attr": "data-zoom",
+          "type": "number",
+          "default": 1.1,
+          "min": 1,
+          "max": 1.5,
+          "step": 0.01,
+          "unit": null,
+          "options": null,
+          "label": "Drift zoom",
+          "section": "Timing",
+          "help": "Scale the image slowly grows to while shown. 1 turns it off."
+        },
+        {
+          "key": "background",
+          "attr": "data-background",
+          "type": "color",
+          "default": "#0a372a",
+          "min": null,
+          "max": null,
+          "step": null,
+          "unit": null,
+          "options": null,
+          "label": "Background",
+          "section": "Look",
+          "help": "Colour behind the slides."
+        }
+      ],
+      "demos": [
+        {
+          "name": "default",
+          "title": "Ripple Reveal",
+          "url": "https://vanilla-motion.com/ripple-reveal/embed/"
+        },
+        {
+          "name": "top-left",
+          "title": "Top-left origin",
+          "url": "https://vanilla-motion.com/ripple-reveal/embed/top-left/"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "slug": "ripple-reveal-webgl",
+      "title": "Ripple Reveal WebGL",
+      "excerpt": "Slideshow transition using WebGL with radial mask crossfade and Gaussian sine ring distortion for true pixel-level wave refraction at the reveal edge",
+      "url": "https://vanilla-motion.com/ripple-reveal-webgl/",
+      "category": "Motion quality",
+      "date": "2026-07-22",
+      "tags": [
+        "motion",
+        "webgl",
+        "glsl",
+        "animation"
+      ],
+      "body": "Ripple Reveal WebGL\n\n Slideshow transition using WebGL with radial mask crossfade and Gaussian sine ring distortion for true pixel-level wave refraction at the reveal edge\n\nLive: https://vanilla-motion.com/ripple-reveal-webgl/ · Tuning app: https://vanilla-motion.com/ripple-reveal-webgl/app/ · Code reference: https://vanilla-motion.com/ripple-reveal-webgl/skill.md · Params: https://vanilla-motion.com/ripple-reveal-webgl/params.json\n\nWebGL canvas replaces CSS mask entirely. A fragment shader crossfades two slide textures behind a radial mask while Gaussian-enveloped sine rings physically distort pixels at the wave front — true refractive warping, not a visual overlay.\n\nRipple reveal WebGL\n\nCircle expands from a configurable origin, distorting image pixels at the wave edge like light refracting through moving water.\n\nTop-left origin\n\nSet originX: 0, originY: 0 (or data-origin-x=\"0\" data-origin-y=\"0\") — the same shader handles any origin.\n\nHow it works\n\nA fullscreen <canvas element replaces all slide markup. One GLSL fragment shader does everything in a single pass:\n\n1. Compute aspect-correct distance from each pixel to the wave origin\n2. Apply Gaussian-enveloped sine ring distortion near the wave front\n3. Sample both slide textures at the displaced UV coordinates\n4. Mix prev/curr via a smoothstep radial mask\n\nRing distortion\n\n \n\nx = dist - radius is negative ahead of the wave, zero at the front, positive behind. The Gaussian bell (band) ensures only pixels close to the wave front get displaced — the effect stays confined to the ring, not the whole image.\n\nThe trailing wake (x < 0) uses a different envelope: exponential decay scaled by decay. At decay: 0 the exponential collapses to zero instantly, giving a clean leading edge only. At decay: 3 (default) the distortion fades out slowly behind the wave like a comet tail.\n\nRadial mask crossfade\n\n \n\nsmoothstep produces the soft feather zone. maxDist 0.75 covers the farthest corner from any origin position.\n\nParams → WebGL uniforms\n\n \n\nEvery value lives in params.ts and reaches the shader as a uniform. The values are read every frame, so setParams({ ringSpeed: 2 }) takes effect without a restart.\n\nTexture management\n\nAll slide images preload into WebGL textures before the first frame:\n\n \n\ngl.UNPACKFLIPYWEBGL flips Y on upload so UV (0,0) maps to the image top-left (matching CSS convention).\n\nKen Burns zoom\n\nUV scaling in the shader — no CSS transform needed:\n\n \n\nuKenBurnsCurr goes 0→0.1 during the transition; uKenBurnsPrev stays fixed at 0.1 (outgoing slide is already fully zoomed). Both run from their own independent clocks so the outgoing slide doesn't stutter when a new transition begins.\n\nAccessibility\n\n \n\nSkip mount() entirely — don't just reduce duration. The Ken Burns zoom alone can trigger vestibular symptoms at full speed.",
+      "techUsed": [
+        "webgl",
+        "glsl",
+        "typescript"
+      ],
+      "version": "2.0.0",
+      "caseStudyUrl": "https://vanilla-motion.com/ripple-reveal-webgl/case-study.md",
+      "skillUrl": "https://vanilla-motion.com/ripple-reveal-webgl/skill.md",
+      "paramsUrl": "https://vanilla-motion.com/ripple-reveal-webgl/params.json",
+      "appUrl": "https://vanilla-motion.com/ripple-reveal-webgl/app/",
+      "registryUrl": "https://vanilla-motion.com/r/ripple-reveal-webgl.json",
+      "embed": {
+        "globalName": "RippleRevealWebGL",
+        "scriptUrl": "https://vanilla-motion.com/embed/ripple-reveal-webgl/2.0.0/ripple-reveal-webgl.js",
+        "attribute": "data-ripple-reveal-webgl",
+        "requires": []
+      },
+      "dependencies": [],
+      "params": [
+        {
+          "key": "originX",
+          "attr": "data-origin-x",
+          "type": "number",
+          "default": 0.5,
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "unit": null,
+          "options": null,
+          "label": "Origin X",
+          "section": "Reveal",
+          "help": "Where the wave starts across the width. 0 is left, 1 is right."
+        },
+        {
+          "key": "originY",
+          "attr": "data-origin-y",
+          "type": "number",
+          "default": 0.5,
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "unit": null,
+          "options": null,
+          "label": "Origin Y",
+          "section": "Reveal",
+          "help": "Where the wave starts down the height. 0 is top, 1 is bottom."
+        },
+        {
+          "key": "feather",
+          "attr": "data-feather",
+          "type": "number",
+          "default": 0.15,
+          "min": 0,
+          "max": 0.3,
+          "step": 0.005,
+          "unit": null,
+          "options": null,
+          "label": "Soft edge",
+          "section": "Reveal",
+          "help": "How soft the edge of the revealed circle is. 0 is hard."
+        },
+        {
+          "key": "duration",
+          "attr": "data-duration",
+          "type": "number",
+          "default": 1,
+          "min": 0.2,
+          "max": 4,
+          "step": 0.05,
+          "unit": "s",
+          "options": null,
+          "label": "Duration",
+          "section": "Reveal",
+          "help": "How long one reveal takes."
+        },
+        {
+          "key": "delay",
+          "attr": "data-delay",
+          "type": "number",
+          "default": 3,
+          "min": 0.5,
+          "max": 12,
+          "step": 0.1,
+          "unit": "s",
+          "options": null,
+          "label": "Pause",
+          "section": "Reveal",
+          "help": "How long a slide stays before the next reveal."
+        },
+        {
+          "key": "kenBurnsDuration",
+          "attr": "data-ken-burns-duration",
+          "type": "number",
+          "default": 10,
+          "min": 1,
+          "max": 30,
+          "step": 0.5,
+          "unit": "s",
+          "options": null,
+          "label": "Zoom time",
+          "section": "Reveal",
+          "help": "How long the slow zoom on each slide takes."
+        },
+        {
+          "key": "distortScale",
+          "attr": "data-distort-scale",
+          "type": "number",
+          "default": 40,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": null,
+          "options": null,
+          "label": "Strength",
+          "section": "Ring",
+          "help": "How far the ring pushes pixels. 0 turns the distortion off."
+        },
+        {
+          "key": "ringCount",
+          "attr": "data-ring-count",
+          "type": "number",
+          "default": 8,
+          "min": 1,
+          "max": 20,
+          "step": 1,
+          "unit": null,
+          "options": null,
+          "label": "Rings",
+          "section": "Ring",
+          "help": "How many waves the ring holds."
+        },
+        {
+          "key": "ringWidth",
+          "attr": "data-ring-width",
+          "type": "number",
+          "default": 0.05,
+          "min": 0.01,
+          "max": 0.3,
+          "step": 0.005,
+          "unit": null,
+          "options": null,
+          "label": "Band width",
+          "section": "Ring",
+          "help": "How wide the band around the wave front is. Smaller is a narrower band."
+        },
+        {
+          "key": "ringLength",
+          "attr": "data-ring-length",
+          "type": "number",
+          "default": 2,
+          "min": 0.2,
+          "max": 5,
+          "step": 0.05,
+          "unit": null,
+          "options": null,
+          "label": "Wavelength",
+          "section": "Ring",
+          "help": "Spacing between rings. Larger shows fewer rings."
+        },
+        {
+          "key": "ringSpeed",
+          "attr": "data-ring-speed",
+          "type": "number",
+          "default": 1,
+          "min": 0.2,
+          "max": 3,
+          "step": 0.05,
+          "unit": null,
+          "options": null,
+          "label": "Speed",
+          "section": "Ring",
+          "help": "How fast the ring travels outward."
+        },
+        {
+          "key": "decay",
+          "attr": "data-decay",
+          "type": "number",
+          "default": 3,
+          "min": 0,
+          "max": 20,
+          "step": 0.1,
+          "unit": null,
+          "options": null,
+          "label": "Wake",
+          "section": "Ring",
+          "help": "Length of the trail behind the ring. 0 is a clean leading edge only."
+        },
+        {
+          "key": "water",
+          "attr": "data-water",
+          "type": "boolean",
+          "default": true,
+          "min": null,
+          "max": null,
+          "step": null,
+          "unit": null,
+          "options": null,
+          "label": "Water layer",
+          "section": "Water",
+          "help": "Ripples that follow the mouse over the slideshow. Needs a mouse; off on touch screens."
+        },
+        {
+          "key": "waterClick",
+          "attr": "data-water-click",
+          "type": "boolean",
+          "default": true,
+          "min": null,
+          "max": null,
+          "step": null,
+          "unit": null,
+          "options": null,
+          "label": "Splash on click",
+          "section": "Water",
+          "help": "A stronger drop when you click, besides the gentle trail."
+        },
+        {
+          "key": "waterResolution",
+          "attr": "data-water-resolution",
+          "type": "number",
+          "default": 256,
+          "min": null,
+          "max": null,
+          "step": null,
+          "unit": null,
+          "options": null,
+          "label": null,
+          "section": null,
+          "help": null
+        },
+        {
+          "key": "dropRadius",
+          "attr": "data-drop-radius",
+          "type": "number",
+          "default": 20,
+          "min": 4,
+          "max": 80,
+          "step": 1,
+          "unit": "px",
+          "options": null,
+          "label": "Drop size",
+          "section": "Water",
+          "help": "Radius of each drop in pixels."
+        },
+        {
+          "key": "perturbance",
+          "attr": "data-perturbance",
+          "type": "number",
+          "default": 0.015,
+          "min": 0,
+          "max": 0.08,
+          "step": 0.001,
+          "unit": null,
+          "options": null,
+          "label": "Refraction",
+          "section": "Water",
+          "help": "How far the waves bend the image beneath them."
+        },
+        {
+          "key": "persistence",
+          "attr": "data-persistence",
+          "type": "number",
+          "default": 0.65,
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "unit": null,
+          "options": null,
+          "label": "Persistence",
+          "section": "Water",
+          "help": "How long ripples keep ringing before the water settles."
+        }
+      ],
+      "demos": [
+        {
+          "name": "default",
+          "title": "Ripple Reveal WebGL",
+          "url": "https://vanilla-motion.com/ripple-reveal-webgl/embed/"
+        },
+        {
+          "name": "top-left",
+          "title": "Top-left origin",
+          "url": "https://vanilla-motion.com/ripple-reveal-webgl/embed/top-left/"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "slug": "venetian-blind",
+      "title": "Venetian Blind",
+      "excerpt": "Two CSS mask transitions that split a slide into vertical strips — one collapses the outgoing image, the other reveals the incoming one. No JS animation library.",
+      "url": "https://vanilla-motion.com/venetian-blind/",
+      "category": "Motion quality",
+      "date": "2026-07-21",
+      "tags": [
+        "motion",
+        "css",
+        "css-mask",
+        "animation"
+      ],
+      "body": "Venetian Blind\n\n Two CSS mask transitions that split a slide into vertical strips — one collapses the outgoing image, the other reveals the incoming one. No JS animation library.\n\nLive: https://vanilla-motion.com/venetian-blind/ · Tuning app: https://vanilla-motion.com/venetian-blind/app/ · Code reference: https://vanilla-motion.com/venetian-blind/skill.md · Params: https://vanilla-motion.com/venetian-blind/params.json\n\nTwo variations of a venetian-blind transition for full-bleed image slideshows — both built entirely with CSS mask and @keyframes, no animation library. The effect splits a slide into 5 vertical strips that collapse or expand with a staggered timing, creating a mechanical reveal that works well for editorial and portfolio contexts.\n\nDisappear: outgoing slide collapses\n\nEach strip on the outgoing slide shrinks toward its vertical center, exposing the next image beneath.\n\nFive @property-registered custom properties (--p1…--p5) animate from 0 to 1 via @keyframes. Each drives a column of the mask, shrinking the visible region toward center:\n\n \n\nThe +1px on column width closes rasterization gaps at non-integer device pixel ratios. .active goes on the outgoing slide (direction: \"collapse\"); after animationend it's removed and the slide drops to z-index: 0.\n\nReveal: incoming slide expands\n\nSame strips, reversed direction — the incoming slide expands outward from center rather than collapsing inward.\n\nTwo things differ from the disappear variant:\n\n1. .active targets the incoming slide, not the outgoing. The outgoing stays at z-index: 1 beneath, fully visible until covered.\n2. Strip formula is inverted: starts at center, expands to edges.\n\n \n\nWith direction: \"reveal\" non-active slides have no mask applied — they're fully visible by default. Only the incoming .active slide carries the mask during its animation.\n\nIn the packaged effect both variants are one class, switched by the direction param. A single @property --vm-vb-p runs 0 to 1 over duration, and the mask built for each slide derives every strip's own progress from it (stagger percent later per strip, eased in as t squared), so the strip count is a param too. The direction is purely determined by the --t/--b formula.\n\nWhy @property\n\nCustom properties are strings by default — they can't be interpolated by @keyframes. Registering them as <number via @property makes them numeric and animatable:\n\n \n\nWithout this, the mask would snap from start to end on the first frame instead of animating.\n\nWhy no JS animation library\n\nThe script only manages state: track current index, raise the animated slide's z-index, toggle .active. All interpolation happens in CSS. Zero dependencies.\n\nAccessibility\n\n \n\nWhen prefers-reduced-motion is set, skip mount and keep the first image as a static <img. Slides stay static.",
+      "techUsed": [
+        "css-mask",
+        "css-custom-properties",
+        "at-property",
+        "css-animations",
+        "vanilla-js",
+        "typescript"
+      ],
+      "version": "1.0.0",
+      "caseStudyUrl": "https://vanilla-motion.com/venetian-blind/case-study.md",
+      "skillUrl": "https://vanilla-motion.com/venetian-blind/skill.md",
+      "paramsUrl": "https://vanilla-motion.com/venetian-blind/params.json",
+      "appUrl": "https://vanilla-motion.com/venetian-blind/app/",
+      "registryUrl": "https://vanilla-motion.com/r/venetian-blind.json",
+      "embed": {
+        "globalName": "VenetianBlind",
+        "scriptUrl": "https://vanilla-motion.com/embed/venetian-blind/1.0.0/venetian-blind.js",
+        "attribute": "data-venetian-blind",
+        "requires": []
+      },
+      "dependencies": [],
+      "params": [
+        {
+          "key": "direction",
+          "attr": "data-direction",
+          "type": "string",
+          "default": "collapse",
+          "min": null,
+          "max": null,
+          "step": null,
+          "unit": null,
+          "options": [
+            "collapse",
+            "reveal"
+          ],
+          "label": "Direction",
+          "section": "Blind",
+          "help": "Whether the outgoing strips shrink to their centre or the incoming strips grow from it."
+        },
+        {
+          "key": "columns",
+          "attr": "data-columns",
+          "type": "number",
+          "default": 5,
+          "min": 2,
+          "max": 20,
+          "step": 1,
+          "unit": null,
+          "options": null,
+          "label": "Strips",
+          "section": "Blind",
+          "help": "Number of vertical strips."
+        },
+        {
+          "key": "stagger",
+          "attr": "data-stagger",
+          "type": "number",
+          "default": 10,
+          "min": 0,
+          "max": 20,
+          "step": 0.5,
+          "unit": null,
+          "options": null,
+          "label": "Stagger",
+          "section": "Blind",
+          "help": "How far each strip lags the one before it, as a percentage of the transition. 0 moves them together."
+        },
+        {
+          "key": "duration",
+          "attr": "data-duration",
+          "type": "number",
+          "default": 800,
+          "min": 100,
+          "max": 4000,
+          "step": 50,
+          "unit": null,
+          "options": null,
+          "label": "Transition duration",
+          "section": "Timing",
+          "help": "Milliseconds one transition takes."
+        },
+        {
+          "key": "delay",
+          "attr": "data-delay",
+          "type": "number",
+          "default": 2000,
+          "min": 500,
+          "max": 10000,
+          "step": 100,
+          "unit": null,
+          "options": null,
+          "label": "Time between slides",
+          "section": "Timing",
+          "help": "Milliseconds a slide stays before the next transition."
+        }
+      ],
+      "demos": [
+        {
+          "name": "default",
+          "title": "Venetian Blind",
+          "url": "https://vanilla-motion.com/venetian-blind/embed/"
+        },
+        {
+          "name": "reveal",
+          "title": "Reveal",
+          "url": "https://vanilla-motion.com/venetian-blind/embed/reveal/"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "slug": "css-tab-shape",
+      "title": "CSS Tab Shape",
+      "excerpt": "Create tab shapes using CSS mask and clip-path: shape() techniques",
+      "url": "https://vanilla-motion.com/css-tab-shape/",
+      "category": "CSS technique",
+      "date": "2026-07-20",
+      "tags": [
+        "css-mask",
+        "css-clip-path",
+        "shapes",
+        "tabs"
+      ],
+      "body": "CSS Tab Shape\n\n Create tab shapes using CSS mask and clip-path: shape() techniques\n\nLive: https://vanilla-motion.com/css-tab-shape/ · Tuning app: https://vanilla-motion.com/css-tab-shape/app/ · Code reference: https://vanilla-motion.com/css-tab-shape/skill.md · Params: https://vanilla-motion.com/css-tab-shape/params.json\n\nCreate tab shapes using CSS mask and clip-path: shape() techniques.\n\nTab UI with CSS mask\n\n1. Apply normal paddings\n2. Create a border around the tab, as we will mask out everything from this border outward.\n \n3. Use mask with 3 layers to cut out the red border\n \n4. Finish with hover status\n\nClip path shape()\nThis approach using clip-path: shape(), a modern function of clip path. This solve the box model issue of using mask.\n\n \nTabs with folder shape",
+      "techUsed": [
+        "css-mask",
+        "css-clip-path",
+        "css-shape-function"
+      ],
+      "version": "1.0.0",
+      "caseStudyUrl": "https://vanilla-motion.com/css-tab-shape/case-study.md",
+      "skillUrl": "https://vanilla-motion.com/css-tab-shape/skill.md",
+      "paramsUrl": "https://vanilla-motion.com/css-tab-shape/params.json",
+      "appUrl": "https://vanilla-motion.com/css-tab-shape/app/",
+      "registryUrl": "https://vanilla-motion.com/r/css-tab-shape.json",
+      "embed": {
+        "globalName": "CssTabShape",
+        "scriptUrl": "https://vanilla-motion.com/embed/css-tab-shape/1.0.0/css-tab-shape.js",
+        "attribute": "data-css-tab-shape",
+        "requires": []
+      },
+      "dependencies": [],
+      "params": [
+        {
+          "key": "technique",
+          "attr": "data-technique",
+          "type": "string",
+          "default": "folder",
+          "min": null,
+          "max": null,
+          "step": null,
+          "unit": null,
+          "options": [
+            "folder",
+            "clip-path",
+            "mask"
+          ],
+          "label": "Technique",
+          "section": "Shape",
+          "help": "Folder: shape() with a slanted right edge. Clip-path: shape() with flared feet. Mask: a border cut away with mask layers."
+        },
+        {
+          "key": "radius",
+          "attr": "data-radius",
+          "type": "number",
+          "default": 8,
+          "min": 2,
+          "max": 32,
+          "step": 1,
+          "unit": null,
+          "options": null,
+          "label": "Radius",
+          "section": "Shape",
+          "help": "Corner radius in px. The folder slant scales with it."
+        },
+        {
+          "key": "paddingX",
+          "attr": "data-padding-x",
+          "type": "number",
+          "default": 24,
+          "min": 0,
+          "max": 64,
+          "step": 1,
+          "unit": null,
+          "options": null,
+          "label": "Padding X",
+          "section": "Shape",
+          "help": "Space left and right of the label."
+        },
+        {
+          "key": "paddingY",
+          "attr": "data-padding-y",
+          "type": "number",
+          "default": 8,
+          "min": 0,
+          "max": 32,
+          "step": 1,
+          "unit": null,
+          "options": null,
+          "label": "Padding Y",
+          "section": "Shape",
+          "help": "Space above and below the label."
+        },
+        {
+          "key": "gap",
+          "attr": "data-gap",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "max": 24,
+          "step": 1,
+          "unit": null,
+          "options": null,
+          "label": "Gap",
+          "section": "Shape",
+          "help": "Space between tabs."
+        },
+        {
+          "key": "overlap",
+          "attr": "data-overlap",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "max": 32,
+          "step": 1,
+          "unit": null,
+          "options": null,
+          "label": "Overlap",
+          "section": "Shape",
+          "help": "How far each tab slides under the one before it."
+        },
+        {
+          "key": "tabColor",
+          "attr": "data-tab-color",
+          "type": "color",
+          "default": "#60A5FA",
+          "min": null,
+          "max": null,
+          "step": null,
+          "unit": null,
+          "options": null,
+          "label": "Tab",
+          "section": "Color",
+          "help": "Fill of every tab."
+        },
+        {
+          "key": "activeColor",
+          "attr": "data-active-color",
+          "type": "color",
+          "default": "#67E8F9",
+          "min": null,
+          "max": null,
+          "step": null,
+          "unit": null,
+          "options": null,
+          "label": "Active",
+          "section": "Color",
+          "help": "Fill of the first and the hovered tab when hover highlight is on."
+        },
+        {
+          "key": "textColor",
+          "attr": "data-text-color",
+          "type": "color",
+          "default": "#18181B",
+          "min": null,
+          "max": null,
+          "step": null,
+          "unit": null,
+          "options": null,
+          "label": "Text",
+          "section": "Color",
+          "help": "Label colour."
+        },
+        {
+          "key": "trackColor",
+          "attr": "data-track-color",
+          "type": "color",
+          "default": "#FFFFFF",
+          "min": null,
+          "max": null,
+          "step": null,
+          "unit": null,
+          "options": null,
+          "label": "Strip",
+          "section": "Color",
+          "help": "Colour of the strip behind the tabs."
+        },
+        {
+          "key": "bgColor",
+          "attr": "data-bg-color",
+          "type": "color",
+          "default": "#FFFFFF",
+          "min": null,
+          "max": null,
+          "step": null,
+          "unit": null,
+          "options": null,
+          "label": "Background",
+          "section": "Color",
+          "help": "Colour of the page around the strip."
+        },
+        {
+          "key": "hoverHighlight",
+          "attr": "data-hover-highlight",
+          "type": "boolean",
+          "default": false,
+          "min": null,
+          "max": null,
+          "step": null,
+          "unit": null,
+          "options": null,
+          "label": "Hover highlight",
+          "section": "Color",
+          "help": "Only the first and the hovered tab are filled, with the active colour."
+        }
+      ],
+      "demos": [
+        {
+          "name": "default",
+          "title": "CSS Tab Shape",
+          "url": "https://vanilla-motion.com/css-tab-shape/embed/"
+        },
+        {
+          "name": "folder-stack",
+          "title": "Folder tabs, stacked",
+          "url": "https://vanilla-motion.com/css-tab-shape/embed/folder-stack/"
+        },
+        {
+          "name": "clip-path",
+          "title": "clip-path: shape()",
+          "url": "https://vanilla-motion.com/css-tab-shape/embed/clip-path/"
+        },
+        {
+          "name": "mask",
+          "title": "CSS mask",
+          "url": "https://vanilla-motion.com/css-tab-shape/embed/mask/"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "slug": "horizontal-sticky-stack",
+      "title": "Horizontal Sticky Stack",
+      "excerpt": "A vanilla CSS horizontal scroll section where cards stick and stack as you scroll through.",
+      "url": "https://vanilla-motion.com/horizontal-sticky-stack/",
+      "category": "CSS technique",
+      "date": "2026-07-14",
+      "tags": [
+        "css-animations",
+        "scroll",
+        "sticky"
+      ],
+      "body": "Horizontal Sticky Stack\n\n A vanilla CSS horizontal scroll section where cards stick and stack as you scroll through.\n\nLive: https://vanilla-motion.com/horizontal-sticky-stack/ · Tuning app: https://vanilla-motion.com/horizontal-sticky-stack/app/ · Code reference: https://vanilla-motion.com/horizontal-sticky-stack/skill.md · Params: https://vanilla-motion.com/horizontal-sticky-stack/params.json\n\nA scroll-driven layout where cards pin in place and stack horizontally as the user scrolls down. This pattern creates a sense of depth and sequence, commonly used for feature showcases and product walkthroughs.\n\nWhat makes this tutorial special: the motion is pure CSS using animation- — no JavaScript runs while you scroll. (The effect's small script only builds the cards and writes your settings as CSS variables.) Note that scroll-driven animations are not supported on Firefox at the time of this writing.\n\nStep 1: The first stack\n\nMy approach for complex layouts always starts with the static layout and a proper box model first.\n\nStep 2: Static, responsive layout\n\nThen proceed with the complete layout for both desktop and mobile. No need to put 100% effort into this step — it's just a prep so we have in mind how the mobile layout will look.\n\n At this step, since we are aware that there's animation to apply, be a bit more generous with HTML elements — allow more wrappers, each handling a specific purpose. One wrapper for sticky, one for sizing with width and height, one for transform. This helps avoid CSS conflicts in the animation steps.\n\nStep 3: Sticky\n\nHere comes the fun part. Implement the animation once the static layout is ready.",
+      "techUsed": [
+        "css-animations",
+        "css-scroll-driven-animations",
+        "css-custom-properties",
+        "typescript"
+      ],
+      "version": "1.0.0",
+      "caseStudyUrl": "https://vanilla-motion.com/horizontal-sticky-stack/case-study.md",
+      "skillUrl": "https://vanilla-motion.com/horizontal-sticky-stack/skill.md",
+      "paramsUrl": "https://vanilla-motion.com/horizontal-sticky-stack/params.json",
+      "appUrl": "https://vanilla-motion.com/horizontal-sticky-stack/app/",
+      "registryUrl": "https://vanilla-motion.com/r/horizontal-sticky-stack.json",
+      "embed": {
+        "globalName": "HorizontalStickyStack",
+        "scriptUrl": "https://vanilla-motion.com/embed/horizontal-sticky-stack/1.0.0/horizontal-sticky-stack.js",
+        "attribute": "data-horizontal-sticky-stack",
+        "requires": []
+      },
+      "dependencies": [],
+      "params": [
+        {
+          "key": "layout",
+          "attr": "data-layout",
+          "type": "string",
+          "default": "stack",
+          "min": null,
+          "max": null,
+          "step": null,
+          "unit": null,
+          "options": [
+            "stack",
+            "static"
+          ],
+          "label": "Layout",
+          "section": "Layout",
+          "help": "Stack: the cards pin and slide together as you scroll the canvas. Static: the same cards as a plain list."
+        },
+        {
+          "key": "containerWidth",
+          "attr": "data-container-width",
+          "type": "number",
+          "default": 1200,
+          "min": 600,
+          "max": 1600,
+          "step": 10,
+          "unit": null,
+          "options": null,
+          "label": "Column width",
+          "section": "Size",
+          "help": "Width of the centred column. On wide screens the card is as wide as this."
+        },
+        {
+          "key": "cardHeight",
+          "attr": "data-card-height",
+          "type": "number",
+          "default": 450,
+          "min": 240,
+          "max": 700,
+          "step": 5,
+          "unit": null,
+          "options": null,
+          "label": "Card height",
+          "section": "Size",
+          "help": "Height of a card on wide screens."
+        },
+        {
+          "key": "cardHeightSmall",
+          "attr": "data-card-height-small",
+          "type": "number",
+          "default": 360,
+          "min": 240,
+          "max": 700,
+          "step": 5,
+          "unit": null,
+          "options": null,
+          "label": "Card height, medium",
+          "section": "Size",
+          "help": "Height of a card on medium screens (768 to 1024 px wide)."
+        },
+        {
+          "key": "cardWidthSmall",
+          "attr": "data-card-width-small",
+          "type": "number",
+          "default": 800,
+          "min": 400,
+          "max": 1100,
+          "step": 10,
+          "unit": null,
+          "options": null,
+          "label": "Card width, medium",
+          "section": "Size",
+          "help": "Width of a card on medium screens."
+        },
+        {
+          "key": "spineWidth",
+          "attr": "data-spine-width",
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 120,
+          "step": 1,
+          "unit": null,
+          "options": null,
+          "label": "Label strip",
+          "section": "Size",
+          "help": "Width of the vertical label strip. Each card peeks out by this much once stacked."
+        },
+        {
+          "key": "cardGap",
+          "attr": "data-card-gap",
+          "type": "number",
+          "default": 20,
+          "min": 0,
+          "max": 80,
+          "step": 1,
+          "unit": null,
+          "options": null,
+          "label": "Card gap",
+          "section": "Size",
+          "help": "Space between the cards before they slide together."
+        },
+        {
+          "key": "cornerRadius",
+          "attr": "data-corner-radius",
+          "type": "number",
+          "default": 32,
+          "min": 0,
+          "max": 64,
+          "step": 1,
+          "unit": null,
+          "options": null,
+          "label": "Corner radius",
+          "section": "Size",
+          "help": "Rounding of the cards and their images."
+        },
+        {
+          "key": "mobileStackGap",
+          "attr": "data-mobile-stack-gap",
+          "type": "number",
+          "default": 10,
+          "min": 0,
+          "max": 40,
+          "step": 1,
+          "unit": null,
+          "options": null,
+          "label": "Stack step",
+          "section": "Mobile",
+          "help": "How much of each card stays visible above the next one on narrow screens."
+        },
+        {
+          "key": "mobileCardMinHeight",
+          "attr": "data-mobile-card-min-height",
+          "type": "number",
+          "default": 500,
+          "min": 200,
+          "max": 800,
+          "step": 10,
+          "unit": null,
+          "options": null,
+          "label": "Card min height",
+          "section": "Mobile",
+          "help": "Smallest card height on narrow screens. Cards are 65% of the view tall otherwise."
+        },
+        {
+          "key": "bgColor",
+          "attr": "data-bg-color",
+          "type": "color",
+          "default": "#FFFFFF",
+          "min": null,
+          "max": null,
+          "step": null,
+          "unit": null,
+          "options": null,
+          "label": "Background",
+          "section": "Color",
+          "help": "Colour behind the cards."
+        },
+        {
+          "key": "bgOpacity",
+          "attr": "data-bg-opacity",
+          "type": "number",
+          "default": 1,
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "unit": null,
+          "options": null,
+          "label": "Background opacity",
+          "section": "Color",
+          "help": "0 leaves the page behind the stack showing through."
+        },
+        {
+          "key": "textColor",
+          "attr": "data-text-color",
+          "type": "color",
+          "default": "#18181B",
+          "min": null,
+          "max": null,
+          "step": null,
+          "unit": null,
+          "options": null,
+          "label": "Headings",
+          "section": "Color",
+          "help": "Colour of the card titles."
+        },
+        {
+          "key": "mutedColor",
+          "attr": "data-muted-color",
+          "type": "color",
+          "default": "#6A7282",
+          "min": null,
+          "max": null,
+          "step": null,
+          "unit": null,
+          "options": null,
+          "label": "Text",
+          "section": "Color",
+          "help": "Colour of the card text and the label strip."
+        },
+        {
+          "key": "mediaColor",
+          "attr": "data-media-color",
+          "type": "color",
+          "default": "#E2E8F0",
+          "min": null,
+          "max": null,
+          "step": null,
+          "unit": null,
+          "options": null,
+          "label": "Image backdrop",
+          "section": "Color",
+          "help": "Colour behind an image while it loads."
+        }
+      ],
+      "demos": [
+        {
+          "name": "default",
+          "title": "Horizontal Sticky Stack",
+          "url": "https://vanilla-motion.com/horizontal-sticky-stack/embed/"
+        },
+        {
+          "name": "first-stack",
+          "title": "The first stack",
+          "url": "https://vanilla-motion.com/horizontal-sticky-stack/embed/first-stack/"
+        },
+        {
+          "name": "static-layout",
+          "title": "Static, responsive layout",
+          "url": "https://vanilla-motion.com/horizontal-sticky-stack/embed/static-layout/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-12T06:06:19.163Z",
+  "generatedAt": "2026-11-12T08:14:07.019Z",
   "site": {
     "name": "Vanilla Motion",
     "url": "https://vanilla-motion.com",
@@ -10,6 +10,66 @@
     "socials": {}
   },
   "taxonomy": [
+    {
+      "slug": "ui",
+      "label": "UI",
+      "category": "Section"
+    },
+    {
+      "slug": "web",
+      "label": "Web design",
+      "category": "Section"
+    },
+    {
+      "slug": "reveal",
+      "label": "Reveal",
+      "category": "Kind"
+    },
+    {
+      "slug": "transition",
+      "label": "Transition",
+      "category": "Kind"
+    },
+    {
+      "slug": "scroll",
+      "label": "Scroll",
+      "category": "Kind"
+    },
+    {
+      "slug": "drag",
+      "label": "Drag",
+      "category": "Kind"
+    },
+    {
+      "slug": "cursor",
+      "label": "Cursor",
+      "category": "Kind"
+    },
+    {
+      "slug": "hover",
+      "label": "Hover",
+      "category": "Kind"
+    },
+    {
+      "slug": "shape",
+      "label": "Shape",
+      "category": "Kind"
+    },
+    {
+      "slug": "loop",
+      "label": "Loop",
+      "category": "Kind"
+    },
+    {
+      "slug": "text",
+      "label": "Text",
+      "category": "Kind"
+    },
+    {
+      "slug": "image",
+      "label": "Image",
+      "category": "Kind"
+    },
     {
       "slug": "css",
       "label": "CSS",
@@ -203,7 +263,11 @@
       "title": "Ice Logo",
       "excerpt": "Any SVG logo cut from ice: it crumbles into splinters, chips and powder under the cursor, then pieces itself back together.",
       "url": "https://vanilla-motion.com/ice-logo/",
-      "category": "Rendering",
+      "category": "Web design",
+      "section": "web",
+      "kind": "cursor",
+      "kindLabel": "Cursor",
+      "summary": "Any SVG logo cut from ice: it crumbles under the cursor, then pieces itself back together.",
       "date": "2026-11-12",
       "tags": [
         "webgl",
@@ -698,7 +762,11 @@
       "title": "Ripple Reveal",
       "excerpt": "Slideshow transition using CSS mask + radial-gradient to expand slides outward from a configurable origin point with a soft liquid ripple edge",
       "url": "https://vanilla-motion.com/ripple-reveal/",
-      "category": "Motion quality",
+      "category": "Web design",
+      "section": "web",
+      "kind": "transition",
+      "kindLabel": "Transition",
+      "summary": "Each new slide spreads out from one point with a soft, liquid edge.",
       "date": "2026-07-22",
       "tags": [
         "motion",
@@ -866,7 +934,11 @@
       "title": "Ripple Reveal WebGL",
       "excerpt": "Slideshow transition using WebGL with radial mask crossfade and Gaussian sine ring distortion for true pixel-level wave refraction at the reveal edge",
       "url": "https://vanilla-motion.com/ripple-reveal-webgl/",
-      "category": "Motion quality",
+      "category": "Web design",
+      "section": "web",
+      "kind": "transition",
+      "kindLabel": "Transition",
+      "summary": "Slides change with a water ripple that bends the image at its edge.",
       "date": "2026-07-22",
       "tags": [
         "motion",
@@ -1166,7 +1238,11 @@
       "title": "Venetian Blind",
       "excerpt": "Two CSS mask transitions that split a slide into vertical strips — one collapses the outgoing image, the other reveals the incoming one. No JS animation library.",
       "url": "https://vanilla-motion.com/venetian-blind/",
-      "category": "Motion quality",
+      "category": "Web design",
+      "section": "web",
+      "kind": "transition",
+      "kindLabel": "Transition",
+      "summary": "Slides change in vertical strips, like a blind turning open.",
       "date": "2026-07-21",
       "tags": [
         "motion",
@@ -1290,7 +1366,11 @@
       "title": "CSS Tab Shape",
       "excerpt": "Create tab shapes using CSS mask and clip-path: shape() techniques",
       "url": "https://vanilla-motion.com/css-tab-shape/",
-      "category": "CSS technique",
+      "category": "UI",
+      "section": "ui",
+      "kind": "shape",
+      "kindLabel": "Shape",
+      "summary": "Folder-style tabs with curved corners, cut in plain CSS.",
       "date": "2026-07-20",
       "tags": [
         "css-mask",
@@ -1520,7 +1600,11 @@
       "title": "Horizontal Sticky Stack",
       "excerpt": "A vanilla CSS horizontal scroll section where cards stick and stack as you scroll through.",
       "url": "https://vanilla-motion.com/horizontal-sticky-stack/",
-      "category": "CSS technique",
+      "category": "Web design",
+      "section": "web",
+      "kind": "scroll",
+      "kindLabel": "Scroll",
+      "summary": "Cards slide in sideways and stack on top of each other as you scroll.",
       "date": "2026-07-14",
       "tags": [
         "css-animations",

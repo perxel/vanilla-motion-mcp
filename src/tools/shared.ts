@@ -10,6 +10,7 @@ export function compactEffect(item: EffectItem) {
     excerpt: item.excerpt,
     url: item.url,
     category: item.category || null,
+    kind: item.kindLabel,
     tags: item.labels,
     version: item.version,
   };

@@ -48,11 +48,11 @@ Then ask for what you want, e.g. *"add a hover effect to the logo"* or *"a slide
 
 | Tool             | What it returns                                                                                          |
 |------------------|----------------------------------------------------------------------------------------------------------|
-| `search_effects` | Compact hits by words, tags or tech, with matching case-study passages on the top 3                      |
+| `search_effects` | Compact hits by words, section (UI / Web design), kind, tags or tech, with case-study passages on the top 3 |
 | `get_effect`     | Params (`data-*` attribute, default, range, help), embed snippet, install commands, `mount()` usage, links |
 | `get_skill`      | The effect's `skill.md`: code reference written for agents                                               |
 | `get_case_study` | The effect's case study as Markdown                                                                      |
-| `list_tags`      | The tag and tech vocabulary, grouped by category                                                         |
+| `list_tags`      | The section, kind, tag and tech vocabulary, grouped by category                                          |
 
 **Prompt:** `add_effect` ("a hover effect for the logo") runs `search_effects` → `get_effect` → `get_skill` and writes
 the integration.

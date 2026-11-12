@@ -34,6 +34,12 @@ const Effect = z.object({
   excerpt: z.string(),
   url: z.string(),
   category: z.string().nullable(),
+  // Site plan 002: Section (ui / web, its label is category) and one kind per effect. Optional so a
+  // content.json from before them still parses.
+  section: z.string().nullable().default(null),
+  kind: z.string().nullable().default(null),
+  kindLabel: z.string().nullable().default(null),
+  summary: z.string().nullable().default(null),
   date: z.string().nullable(),
   tags: z.array(z.string()),
   body: z.string(),

@@ -88,4 +88,4 @@ Pushes to `main` deploy through `.github/workflows/deploy.yml` (Markdown-only pu
 
 ## License
 
-MIT © [Perxel](https://perxel.com)
+[PolyForm Shield 1.0.0](LICENSE) © [Perxel](https://perxel.com)

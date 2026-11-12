@@ -13,7 +13,7 @@
   "preview_urls": false,
   "vars": {
     // Paste the 32-char account id from the Cloudflare dashboard.
-    "CF_ACCOUNT_ID": "<paste: Cloudflare account ID>"
+    "CF_ACCOUNT_ID": "8ea3c7b85496699b18a90c5f1d4366be"
   }
   // Secrets (never commit values; set with `wrangler secret put -c wrangler.proxy.jsonc <name>`):
   //   CF_API_TOKEN: token with Account | Account Analytics | Read (account-wide:

@@ -32,7 +32,7 @@
     "DASH_ACCESS_TEAM": "perxel.cloudflareaccess.com",
     // Application Audience (AUD) tag of the Access app protecting
     // <host>/dash (Access → Applications → the app → Overview). Per MCP.
-    "DASH_ACCESS_AUD": "<paste: AUD tag of the /dash Access app>"
+    "DASH_ACCESS_AUD": "57d7adb523c1fdc9154ba4df15dd91466863a1f4746337115fc07e7ea43251c1"
   },
   // Secrets (never commit values; `wrangler secret put -c wrangler.mcp.jsonc <NAME>`):
   //   IP_HASH_SALT, COOKIE_ENCRYPTION_KEY: random strings (`openssl rand -hex 32`)
@@ -43,8 +43,8 @@
   // KV ids are placeholders: run `wrangler kv namespace create OAUTH_KV`
   // (and `CONTENT_KV`) and paste the ids here.
   "kv_namespaces": [
-    { "binding": "OAUTH_KV", "id": "<run: wrangler kv namespace create OAUTH_KV>" },
-    { "binding": "CONTENT_KV", "id": "<run: wrangler kv namespace create CONTENT_KV>" }
+    { "binding": "OAUTH_KV", "id": "a57a8fb8f91b42b8b26f4dc2517b7644" },
+    { "binding": "CONTENT_KV", "id": "6d88b5e35b21460a9f5c6ad57ef44e73" }
   ],
   // mcp_<slug>, with - turned into _. The dashboard reads the same name.
   "analytics_engine_datasets": [{ "binding": "METRICS", "dataset": "mcp_vanilla_motion" }],
@@ -56,13 +56,13 @@
     {
       "name": "RATE_LIMITER",
       // change per MCP: unique in the account
-      "namespace_id": "1001",
+      "namespace_id": "3008",
       "simple": { "limit": 60, "period": 60 }
     },
     {
       "name": "RATE_LIMITER_ANTHROPIC",
       // change per MCP: unique in the account
-      "namespace_id": "1002",
+      "namespace_id": "3009",
       "simple": { "limit": 600, "period": 60 }
     }
   ]

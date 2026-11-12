@@ -1,0 +1,59 @@
+import { validateAskConfig, type AskConfig } from "../ask/config.js";
+import type { PromptDef } from "./prompt.js";
+import type { ToolDef } from "./tool.js";
+
+export interface McpConfig {
+  slug: string; // [a-z0-9-]+, used for dataset name and dashboard path
+  name: string;
+  version: string;
+  description: string;
+  /** Optional server instructions sent to the model on initialize: tool order, units, caveats. Keep short. */
+  instructions?: string;
+  scopes: Record<string, string>; // every private tool's scope must be listed
+  /** Sign-in before anything (initialize, tools/list, public tools): Claude asks for it when the connector is added, and
+   * the docs page lists no tools. For an owner-only MCP; leave it out for a public one. */
+  requireAuth?: boolean;
+  tools: ToolDef[];
+  /** Optional prompt templates (prompts/list, prompts/get). Public; leave out for none. */
+  prompts?: PromptDef[];
+  docs: { contact: string };
+  /** Optional Ask chat endpoint (/ask) over the public tools. Omit to serve no Ask routes. */
+  ask?: AskConfig;
+}
+
+const SLUG_RE = /^[a-z0-9-]+$/;
+
+/**
+ * Validates a clone config at startup (and in tests): slug format, unique tool
+ * names, unique prompt names, and every private tool declaring a scope listed in `scopes`.
+ * Throws with a message naming the problem.
+ */
+export function defineConfig(config: McpConfig): McpConfig {
+  if (!SLUG_RE.test(config.slug)) {
+    throw new Error(`invalid slug "${config.slug}": use [a-z0-9-]`);
+  }
+  const seen = new Set<string>();
+  for (const tool of config.tools) {
+    if (seen.has(tool.name)) {
+      throw new Error(`duplicate tool name "${tool.name}"`);
+    }
+    seen.add(tool.name);
+    if (tool.access === "private") {
+      if (!tool.scope) {
+        throw new Error(`private tool "${tool.name}" must declare a scope`);
+      }
+      if (!(tool.scope in config.scopes)) {
+        throw new Error(`private tool "${tool.name}" scope "${tool.scope}" is not listed in config.scopes`);
+      }
+    }
+  }
+  const promptNames = new Set<string>();
+  for (const prompt of config.prompts ?? []) {
+    if (promptNames.has(prompt.name)) {
+      throw new Error(`duplicate prompt name "${prompt.name}"`);
+    }
+    promptNames.add(prompt.name);
+  }
+  if (config.ask) validateAskConfig(config.ask);
+  return config;
+}

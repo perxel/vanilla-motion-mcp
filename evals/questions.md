@@ -55,3 +55,13 @@ appear in the tool result. All tools are public.
 
 - tool: get_effect {"slug": "moving-border"}
 - expect: No public effect
+
+## Which scroll effects are there for a web page?
+
+- tool: search_effects {"section": "web", "kind": "scroll", "limit": 10}
+- expect: horizontal-sticky-stack
+
+## Show me interface (UI) effects
+
+- tool: search_effects {"section": "ui", "limit": 10}
+- expect: css-tab-shape

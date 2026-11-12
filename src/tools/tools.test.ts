@@ -51,6 +51,13 @@ describe("content.json", () => {
     expect(c.siteUrl).toBe("https://vanilla-motion.com");
   });
 
+  it("parses a file from before section and kind", () => {
+    const old = { ...feed, items: feed.items.map(({ section, kind, kindLabel, summary, ...rest }) => rest) };
+    const c = parseContent(old);
+    expect(c.items[0]!.section).toBeNull();
+    expect(c.items[0]!.kind).toBeNull();
+  });
+
   it("rejects another version", () => {
     expect(() => parseContent({ ...feed, version: 2 })).toThrow(/not supported/);
   });
@@ -99,6 +106,26 @@ describe("search_effects", () => {
     expect(hits(r).length).toBe(Math.min(20, feed.items.length));
     const dates = feed.items.map((i) => i.date).sort().reverse();
     expect(dates[0]).toBeTruthy();
+  });
+
+  it("filters by section, slug or label", async () => {
+    const ui = hits(await run(searchEffectsTool, { section: "ui", limit: 20 })).map((h) => h.slug);
+    const uiLabel = hits(await run(searchEffectsTool, { section: "UI", limit: 20 })).map((h) => h.slug);
+    expect(ui).toEqual(["css-tab-shape"]);
+    expect(uiLabel).toEqual(ui);
+    const web = hits(await run(searchEffectsTool, { section: "Web design", limit: 20 })).map((h) => h.slug);
+    expect(web).not.toContain("css-tab-shape");
+    expect(web).toContain("ice-logo");
+  });
+
+  it("filters by kind and returns it on each hit", async () => {
+    const r = await run(searchEffectsTool, { kind: "transition", limit: 20 });
+    const slugs = hits(r).map((h) => h.slug);
+    expect(slugs).toEqual(expect.arrayContaining(["venetian-blind", "ripple-reveal", "ripple-reveal-webgl"]));
+    expect(slugs).not.toContain("ice-logo");
+    expect((hits(r)[0] as Hit & { kind: string }).kind).toBe("Transition");
+    const cursor = hits(await run(searchEffectsTool, { kind: "Cursor", section: "web" })).map((h) => h.slug);
+    expect(cursor).toEqual(["ice-logo"]);
   });
 
   it("says so when nothing matches", async () => {
@@ -168,6 +195,10 @@ describe("list_tags", () => {
     const groups = (r.data as { groups: { category: string; tags: { slug: string; effects: number }[] }[] }).groups;
     const css = groups.find((g) => g.category === "CSS technique")!;
     expect(css.tags.find((t) => t.slug === "css-mask")!.effects).toBeGreaterThan(0);
+    const section = groups.find((g) => g.category === "Section")!;
+    expect(section.tags.find((t) => t.slug === "ui")!.effects).toBe(1);
+    const kind = groups.find((g) => g.category === "Kind")!;
+    expect(kind.tags.find((t) => t.slug === "transition")!.effects).toBe(3);
   });
 
   it("filters by category, case ignored", async () => {
